@@ -8,7 +8,7 @@ RUN yum install -y libcurl-devel gcc sudo make &&\
 
 # Edit sudoers file
 # To avoid error: sudo: sorry, you must have a tty to run sudo
-RUN sed -i -e "s/Defaults    requiretty.*/ #Defaults    requiretty/g" /etc/sudoers
+RUN sed -i -e "s/Defaults    requiretty.*/#Defaults    requiretty/g" /etc/sudoers
 
 # Install td-agent
 RUN curl -L http://toolbelt.treasuredata.com/sh/install-redhat-td-agent2.sh | sh
